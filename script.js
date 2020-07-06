@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Establishing variables, converting to arrays, and splitting them
 const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
 var lowerCaseArray = LowerCase.split("");
 console.log(lowerCaseArray)
@@ -13,10 +14,11 @@ const numbers = '0123456789';
 var numbersArray = numbers.split("");
 console.log(numbersArray)
 
-const specialCharacters = '`~!?';
+const specialCharacters = ' !"#$%&()*+,-./:;<=>?@[\]^_`{|}~';
 var specialCharactersArray = specialCharacters.split("");
 console.log(specialCharactersArray)
 
+// Establishing numeric character length with min & max
 function getPasswordOptions() {
   var passwordLength = parseInt(prompt("How many characters would you like it to be?"));
 
@@ -32,17 +34,21 @@ function getPasswordOptions() {
     alert("password length must be less than 128");
     return;
   }
-  console.log(passwordLength)
-  var isLower = confirm("Would you like lower case characters?");
-  var isUpper = confirm("Would you like upper case characters?");
-  var isNumber = confirm("Would you like numbers?");
-  var isSpecial = confirm("Would you like special characters?");
 
+// Establishing desired parameters (lower case, upper case, numbers, and/or characters)
+  const isLower = confirm("Would you like lower case characters?");
+  const isUpper = confirm("Would you like upper case characters?");
+  const isNumber = confirm("Would you like numbers?");
+  const isSpecial = confirm("Would you like special characters?");
+
+// User must pick one of them
   if(isLower === false && isUpper === false && isNumber === false && isSpecial === false) {
     alert("Must choose one character type.");
     return;
   }
-  var passwordOptions = {
+
+// Establishing password parameters
+  const passwordOptions = {
     isLower,
     isUpper,
     isNumber,
@@ -52,10 +58,11 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
+// Builds password based on those parameters
 function buildPassword() {
-  var options = getPasswordOptions();
-  var results = [];
-  var superArray = [];
+  const options = getPasswordOptions();
+  const results = [];
+  let superArray = [];
 
   if(options.isLower === true) {
     superArray = superArray.concat(lowerCaseArray);
@@ -69,21 +76,21 @@ function buildPassword() {
   if(options.isSpecial === true) {
     superArray = superArray.concat(specialCharactersArray);
   }
-  console.log(superArray)
 
+// Setting loop to randomize choice in various arrays
   for(var i = 0; i < options.passwordLength; i++) {
-  var index = Math.floor(Math.random() * superArray.length);
-  var digit = superArray[index];
+  const index = Math.floor(Math.random() * superArray.length);
+  const digit = superArray[index];
     results.push(digit)
     console.log(results);
   }
   return results.join("")
 }
 
-// Write password to the #password input
+// Writing password to the #password input
 function writePassword() {
-  var password = buildPassword();
-  var passwordText = document.querySelector("#password");
+  const password = buildPassword();
+  const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
