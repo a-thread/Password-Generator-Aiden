@@ -1,13 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Establishing variables, converting to arrays, and splitting them
-const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
-var lowerCaseArray = LowerCase.split("");
+// Establishing variables, converting strings to arrays & splitting them
+const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+var lowerCaseArray = lowerCase.split("");
 console.log(lowerCaseArray)
 
-const UpperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var upperCaseArray = UpperCase.split("");
+const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var upperCaseArray = upperCase.split("");
 console.log(upperCaseArray)
 
 const numbers = '0123456789';
@@ -18,7 +18,7 @@ const specialCharacters = ' !"#$%&()*+,-./:;<=>?@[\]^_`{|}~';
 var specialCharactersArray = specialCharacters.split("");
 console.log(specialCharactersArray)
 
-// Establishing numeric character length with min & max
+// Establishing numeric character length with min of 8 & max of 128
 function getPasswordOptions() {
   var passwordLength = parseInt(prompt("How many characters would you like it to be?"));
 
