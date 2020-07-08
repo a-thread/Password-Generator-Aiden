@@ -19,7 +19,7 @@ The assignment required us to ask the user to choose a character length between 
 - special characters
 I used prompts in my application to interface with the user. 
 
-<img src="/ScreenShots/upper-case.png" width=300px /> <img src="/ScreenShots/lower-case.png" width=300px /> <img src="/ScreenShots/numbers.png" alt="showing original site" width=300px /> <img src="/ScreenShots/special-characters.png" alt="showing Aiden's site" width=300px />
+<img src="/ScreenShots/upper-case.png" width=400px /> <img src="/ScreenShots/lower-case.png" width=400px /> <img src="/ScreenShots/numbers.png" alt="showing original site" width=400px /> <img src="/ScreenShots/special-characters.png" alt="showing Aiden's site" width=400px />
 
 If the user did not choose any of the criteria, an alert would pop up telling them that they had to choose one of the character types.
 <img src="/ScreenShots/choose-one.png" alt="alert saying you must choose one" width=300px />
