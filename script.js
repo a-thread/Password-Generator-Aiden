@@ -20,10 +20,10 @@ console.log(specialCharactersArray)
 
 // Establishing numeric character length with min of 8 & max of 128
 function getPasswordOptions() {
-  var passwordLength = parseInt(prompt("How many characters would you like it to be?"));
+  var passwordLength = parseInt(prompt("Choose a number between 8 and 128."));
 
   if(isNaN(passwordLength) === true) {
-    alert("must be a number");
+    alert("You must choose a number.");
     return;
   }
   if(passwordLength < 8) {
@@ -77,7 +77,7 @@ function buildPassword() {
     superArray = superArray.concat(specialCharactersArray);
   }
 
-// Setting loop to randomize choice in various arrays
+// Setting loop to randomize choices and set password
   for(var i = 0; i < options.passwordLength; i++) {
   const index = Math.floor(Math.random() * superArray.length);
   const digit = superArray[index];
