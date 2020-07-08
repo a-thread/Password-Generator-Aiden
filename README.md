@@ -19,19 +19,19 @@ The assignment required us to ask the user to choose a character length between 
 - special characters
 I used prompts in my application to interface with the user. 
 
-<img src="/ScreenShots/upper-case.png" width=300px /> <img src="/ScreenShots/lower-case.png" width=300px /> <img src="/ScreenShots/numbers.png" width=300px /> <img src="/ScreenShots/special-characters.png" width=300px />
+<img src="/ScreenShots/upper-case.png" width=300px /> <img src="/ScreenShots/lower-case.png" width=300px /> <img src="/ScreenShots/numbers.png" alt="showing original site" width=300px /> <img src="/ScreenShots/special-characters.png" alt="showing Aiden's site" width=300px />
 
 If the user did not choose any of the criteria, an alert would pop up telling them that they had to choose one of the character types.
-<img src="/ScreenShots/choose-one.png" width=300px />
+<img src="/ScreenShots/choose-one.png" alt="alert saying you must choose one" width=300px />
 
 If the user choose a letter instead of a number for their password, an alert would pop up telling them that they had to choose a number.
-<img src="/ScreenShots/choose-number.png" width=300px />
+<img src="/ScreenShots/choose-number.png" alt="alert saying must choose a number" width=300px />
 
 Another alert would pop up if the user chose a number for their password length below 8 or above 128.
-<img src="/ScreenShots/too-short.png" width=300px /> <img src="/ScreenShots/too-long.png" width=300px />
+<img src="/ScreenShots/too-short.png" alt="alert saying must choose a number greater than 8" width=400px /> <img src="/ScreenShots/too-long.png" alt="alert saying must choose a number less than 128" width=400px />
 
 If the user successfully navigated through the criteria, their password would then appear in the main container to be copied.
-<img src="/ScreenShots/generated-password" width=500px />
+<img src="/ScreenShots/generated-password.png" alt="generated password" width=600px />
 
 ## Responsive Screens
 The file given to us to modify was responsive at the very beginning so I just made minor changes to the button sizes to make sure that it was large enough to clearly read on smaller screens. 
