@@ -8,7 +8,7 @@ The assignment was to create an application that generates a random password wit
 
 I used Bootstrap to streamline the look of the page and make it more responsive to multiple screen sizes, cleaning up the local CSS sheet to get rid of unnecessary styling. 
 
-<img src="/ScreenShots/before.png" width=100px /> <img src="/ScreenShots/my-site-mobile.png" width=100px />
+<img src="/ScreenShots/before.png" width=300px /> <img src="/ScreenShots/my-site-mobile.png" width=300px />
 
 ## Javascript
 
