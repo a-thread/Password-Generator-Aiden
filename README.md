@@ -36,4 +36,4 @@ If the user successfully navigated through the criteria, their password would th
 ## Responsive Screens
 The file given to us to modify was responsive at the very beginning so I just made minor changes to the button sizes to make sure that it was large enough to clearly read on smaller screens. 
 
-**If you have any questions about this page or the application, email Aiden Threadgoode at *<aiden.threadgoode@gmail.com>.* **
+**If you have any questions about this page or the application, email Aiden Threadgoode at *<aiden.threadgoode@gmail.com>.**
