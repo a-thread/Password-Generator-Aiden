@@ -31,9 +31,9 @@ Another alert would pop up if the user chose a number for their password length 
 <img src="/ScreenShots/too-short.png" alt="alert saying must choose a number greater than 8" width=400px /> <img src="/ScreenShots/too-long.png" alt="alert saying must choose a number less than 128" width=400px />
 
 If the user successfully navigated through the criteria, their password would then appear in the main container to be copied.
-<img src="/ScreenShots/generated-password.png" alt="generated password" width=600px />
+<img src="/ScreenShots/generated-password.png" alt="generated password" width=500px />
 
 ## Responsive Screens
 The file given to us to modify was responsive at the very beginning so I just made minor changes to the button sizes to make sure that it was large enough to clearly read on smaller screens. 
 
-**If you have any questions about this page or the application, email Aiden Threadgoode at *<aiden.threadgoode@gmail.com>.***
+**If you have any questions about this page or the application, email Aiden Threadgoode at *<aiden.threadgoode@gmail.com>.* **
