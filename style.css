@@ -1,39 +1,24 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-family: sans-serif;
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
-}
-
 .card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  margin-top: 2rem;
 }
 
-h4 {
+h1 {
+  align-items: center;
+  font-weight: bold;
+  padding-top: 1.5rem;
+  color: lightcoral;
+}
+
+h5, h4 {
   font-weight: bold;
   padding-bottom: 1.5rem;
 }
@@ -42,13 +27,11 @@ h4 {
   border: none;
   background-color: mediumturquoise;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 16px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
@@ -59,10 +42,6 @@ button[disabled] {
   background: #c0c7cf;
 }
 
-.float-right {
-  float: right;
-}
-
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -70,6 +49,7 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
+  height: fit-content;
   padding: 15px;
   font-size: 1.2rem;
   text-align: center;
@@ -77,24 +57,4 @@ button[disabled] {
   margin-bottom: 30px;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-}
-
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1.5rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-
-  #password {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .btn {
-    font-size: 1rem;
-  }
 }

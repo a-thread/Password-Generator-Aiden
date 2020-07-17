@@ -1,84 +1,52 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector(".btn");
 
-// Establishing variables, converting strings to arrays & splitting them
+// Calling our variables and splitting them
 const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-var lowerCaseArray = lowerCase.split("");
-console.log(lowerCaseArray)
+const lowerCaseArr = lowerCase.split("");
 
 const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var upperCaseArray = upperCase.split("");
-console.log(upperCaseArray)
+const upperCaseArr = upperCase.split("");
 
 const numbers = '0123456789';
-var numbersArray = numbers.split("");
-console.log(numbersArray)
+const numbersArr = numbers.split("");
 
-const specialCharacters = ' !"#$%&()*+,-./:;<=>?@[\]^_`{|}~';
-var specialCharactersArray = specialCharacters.split("");
-console.log(specialCharactersArray)
+const specialChar = ' !"#$%&()*+,-./:;<=>?@[\]^_`{|}~';
+const specialCharArr = specialChar.split("");
 
-// Establishing numeric character length with min of 8 & max of 128
-function getPasswordOptions() {
-  var passwordLength = parseInt(prompt("Choose a number between 8 and 128."));
-
-  if(isNaN(passwordLength) === true) {
-    alert("You must choose a number.");
-    return;
-  }
-  if(passwordLength < 8) {
-    alert("password length must be greater than 8");
-    return;
-  }
-  if(passwordLength > 128) {
-    alert("password length must be less than 128");
-    return;
-  }
-
-// Establishing desired parameters (lower case, upper case, numbers, and/or characters)
-  const isLower = confirm("Would you like lower case characters?");
-  const isUpper = confirm("Would you like upper case characters?");
-  const isNumber = confirm("Would you like numbers?");
-  const isSpecial = confirm("Would you like special characters?");
-
-// User must pick one of them
-  if(isLower === false && isUpper === false && isNumber === false && isSpecial === false) {
-    alert("Must choose one character type.");
-    return;
-  }
-
-// Establishing password parameters
-  const passwordOptions = {
-    isLower,
-    isUpper,
-    isNumber,
-    isSpecial,
-    passwordLength,
-  }
-  return passwordOptions;
+// Establishing the length of our password via slider
+function getPasswordLength() {
+  const passwordLength = document.getElementById("passLength").value;
+  return passwordLength;
 }
 
-// Builds password based on those parameters
+// Builds password based on which character styles are checked...
 function buildPassword() {
-  const options = getPasswordOptions();
+  // ...based on the length of our slider
+  const length = getPasswordLength();
   const results = [];
   let superArray = [];
 
-  if(options.isLower === true) {
-    superArray = superArray.concat(lowerCaseArray);
+  if(document.getElementById("lowerCase").checked) {
+    superArray = superArray.concat(lowerCaseArr);
   }
-  if(options.isUpper === true) {
-    superArray = superArray.concat(upperCaseArray);
+  if(document.getElementById("upperCase").checked) {
+    superArray = superArray.concat(upperCaseArr);
   }
-  if(options.isNumber === true) {
-    superArray = superArray.concat(numbersArray);
+  if(document.getElementById("numbers").checked) {
+    superArray = superArray.concat(numbersArr);
   }
-  if(options.isSpecial === true) {
-    superArray = superArray.concat(specialCharactersArray);
+  if(document.getElementById("specialChar").checked) {
+    superArray = superArray.concat(specialCharArr);
+  }
+  if(superArray.length === 0) {
+    alert("Please check one character type");
+    return;
   }
 
+
 // Setting loop to randomize choices and set password
-  for(var i = 0; i < options.passwordLength; i++) {
+  for(var i = 0; i < length; i++) {
   const index = Math.floor(Math.random() * superArray.length);
   const digit = superArray[index];
     results.push(digit)
@@ -90,10 +58,12 @@ function buildPassword() {
 // Writing password to the #password input
 function writePassword() {
   const password = buildPassword();
+if(password === null) {
+  passwordText.value = "";
+}
   const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
